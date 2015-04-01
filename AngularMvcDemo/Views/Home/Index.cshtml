@@ -1,0 +1,14 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div ng-controller="CompanionshipController">
+    <h1>The Dwarves in <strong>The Hobbit</strong></h1>
+
+    <h2>The {{companions.dwarves.length}} Dwarves</h2>
+    <ul>
+        <li ng-repeat="dwarf in companions.dwarves">{{dwarf}}</li>
+    </ul>
+    <input type="button" value="clear" data-ng-click="ClearCompanions()" />
+    <input type="button" value="populate" data-ng-click="RepopulateCompanions()" />
+</div>
